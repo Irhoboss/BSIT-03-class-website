@@ -367,3 +367,42 @@ a {
   background: rgba(10,132,255,0.08); 
   color:#0a84ff;
 }
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #0a84ff;
+  cursor: pointer;
+}
+
+/* Sidebar styling (mobile) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  .nav a {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+  .nav.active {
+    left: 0; /* slide in */
+  }
+}
+
