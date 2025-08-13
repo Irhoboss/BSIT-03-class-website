@@ -368,7 +368,7 @@ a {
   color:#0a84ff;
 }
 
-/* Hamburger button */
+/* Hamburger hidden by default */
 .hamburger {
   display: none;
   font-size: 1.8rem;
@@ -378,15 +378,18 @@ a {
   cursor: pointer;
 }
 
-/* Sidebar styling (mobile) */
+/* Mobile styles */
 @media (max-width: 768px) {
+  /* Show hamburger only on mobile */
   .hamburger {
     display: block;
   }
+
+  /* Hide normal nav until hamburger click */
   .nav {
     position: fixed;
     top: 0;
-    left: -250px; /* hidden off-screen */
+    left: -250px; /* hide off screen */
     width: 250px;
     height: 100%;
     background: #fff;
@@ -397,12 +400,15 @@ a {
     transition: left 0.3s ease;
     z-index: 1000;
   }
+
+  /* When active, slide in */
+  .nav.active {
+    left: 0;
+  }
+
+  /* Make links bigger for touch */
   .nav a {
     font-size: 1.1rem;
     padding: 10px 20px;
   }
-  .nav.active {
-    left: 0; /* slide in */
-  }
 }
-
