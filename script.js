@@ -38,7 +38,7 @@ function updateDate() {
             const msUntilMidnight = (24 * 60 * 60 * 1000) - (now.getHours() * 60 * 60 * 1000 + now.getMinutes() * 60 * 1000 + now.getSeconds() * 1000 + now.getMilliseconds());
             setTimeout(updateDate, msUntilMidnight);
 
-  const hamburger = document.getElementById('hamburger');
+const hamburger = document.getElementById('hamburger');
 const sidebar = document.getElementById('sidebar');
 
 hamburger.addEventListener('click', () => {
@@ -49,3 +49,4 @@ hamburger.addEventListener('click', () => {
         // Initial call
 
         updateDate();
+
